@@ -4,14 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>37685899-1306-40f6-bf6e-1c35f568f7c1</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>HW3.py</StartupFile>
+    <StartupFile>HW3Q3.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>HW3</Name>
     <RootNamespace>HW3</RootNamespace>
-    <InterpreterId>MSBuild|hw3_env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|hw3_desktop_env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,9 +22,21 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="HW3.py" />
+    <Compile Include="HW3Q2.py" />
+    <Compile Include="HW3Q3.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Interpreter Include="hw3_desktop_env\">
+      <Id>hw3_desktop_env</Id>
+      <Version>3.10</Version>
+      <Description>hw3_desktop_env (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
     <Interpreter Include="hw3_env\">
       <Id>hw3_env</Id>
       <Version>3.10</Version>
